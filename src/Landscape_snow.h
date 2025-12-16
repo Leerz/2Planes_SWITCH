@@ -17,9 +17,9 @@ struct SnowParticle{
 };
 
 
-class LandscapeSnow :public Landscape{ 
+class LandscapeSnow :public Landscape{
     std::vector<SnowParticle> vParticles;
-    void *background_raw;
+    int background_tex_id;
     Timer snow_particles_timer;
 
 public:

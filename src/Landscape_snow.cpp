@@ -2,8 +2,7 @@
  
  
 LandscapeSnow::LandscapeSnow(){
-    SDL_Surface *img_surface=texture_manager->GetSurface(BACKGROUND_1);
-    background_raw=img_surface->pixels;
+    background_tex_id = BACKGROUND_1;
     snow_particles_timer.SetAlarm(40);
 }
 
@@ -11,8 +10,9 @@ LandscapeSnow::~LandscapeSnow(){
 	
 }
 
-void LandscapeSnow::DrawBackground(){ 
-    render->DrawRawFast(background_raw);
+void LandscapeSnow::DrawBackground(){
+    vec2_t pos(0, 0);
+    render->DrawTexture(texture_manager->GetTexture(background_tex_id), pos);
 }
 
 

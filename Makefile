@@ -57,10 +57,11 @@ CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=c++14
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:=	 -lSDL2_mixer -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf \
-			-lfreetype -lbz2 -lpng -lz -ljpeg \
-			-lvorbisidec -logg -lmpg123 -lmodplug -lstdc++ \
-			-lnx -lm -lout123 
+LIBS	:=	-lSDL2_mixer -lSDL2_image -lSDL2_ttf -lSDL2_gfx -lSDL2main -lSDL2 \
+			-lEGL -lGLESv2 -lglapi -ldrm_nouveau \
+			-lfreetype -lharfbuzz -lfreetype -lbz2 -lpng -lz -ljpeg -lwebp \
+			-lopusfile -lopus -lvorbisidec -logg -lmpg123 -lmodplug \
+			-lnx -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing

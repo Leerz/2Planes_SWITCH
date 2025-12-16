@@ -9,8 +9,8 @@
 
 #define LANDSCAPE_GREEN 1
 
-class LandscapeGreen :public Landscape{  
-    void *background_raw; 
+class LandscapeGreen :public Landscape{
+    int background_tex_id; 
 
 public:
 
